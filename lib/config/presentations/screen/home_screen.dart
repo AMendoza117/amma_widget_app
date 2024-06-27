@@ -1,5 +1,7 @@
 import 'package:amma_widget_app/config/menu/menu_item.dart';
+import 'package:amma_widget_app/config/presentations/screen/buttons/buttons_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,7 +48,7 @@ class _CustomTile extends StatelessWidget {
       subtitle: Text(menuItem.subTitle),
       trailing: Icon(Icons.arrow_forward_ios_outlined, color: color.primary,),
       onTap: () {
-        // TODO: Navegar a otra pantalla
+        context.push(menuItem.link);
       },
     );
   }
